@@ -7,8 +7,32 @@
     <title>Spirograph</title>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js"></script>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div>
+        <h1 style="font-family:courier">Angle1(0-PI/2)</h1>
+        <input type="range" min="0" max="157" value="22" class="slider" id="Angle1">
+        <br>
+        <h1 style="font-family:courier">Angle2(0-PI/2)</h1>
+        <input type="range" min="0" max="1570" value="520" class="slider" id="Angle2">
+    </div>
+    <script>
+            var slider1=document.getElementById("Angle1");
+            var angle1=slider1.value/1000;
+            var slider2=document.getElementById("Angle2");
+            var angle2=slider2.value/1000;
+            slider1.oninput = function()
+            {
+                angle1= this.value/1000;
+                setup();
+            }
+            slider2.oninput = function()
+            {
+                angle2= this.value/1000;
+                setup();
+            }
+    </script>
     <script type="text/javascript" src="/graph.js"></script>
 </body>
 </html>

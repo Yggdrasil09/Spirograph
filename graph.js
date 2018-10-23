@@ -12,6 +12,9 @@ function setup()
     var canvas=createCanvas(600,600);
     canvas.position((windowWidth-width)/2,(windowHeight-height)/2);
     background(0);
+    ang=angle1;
+    ang1=angle2;
+    path=[];
 }
 
 function draw()
